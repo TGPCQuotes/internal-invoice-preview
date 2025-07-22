@@ -116,13 +116,9 @@ export default function QuotePage() {
     try {
       const controller = new AbortController()
       const timeoutId = setTimeout(() => controller.abort(), REQUEST_TIMEOUT)
-      const response = await fetch(`${MAKE_WEBHOOK_URL}?id=${encodeURIComponent(id)}`, {
+      const response = await fetch(`/api/invoice?id=${encodeURIComponent(id)}`, {
         method: "GET",
         signal: controller.signal,
-        headers: {
-          Accept: "text/plain, application/x-www-form-urlencoded, */*",
-          "Content-Type": "application/x-www-form-urlencoded",
-        },
       })
       clearTimeout(timeoutId)
 
