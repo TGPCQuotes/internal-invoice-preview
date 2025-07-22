@@ -43,7 +43,7 @@ export default function QuotePage() {
   const [loading, setLoading] = useState(true)
   const [error, setError] = useState(false)
   const [invoiceData, setInvoiceData] = useState<QuoteData | null>(null)
-  const MAKE_WEBHOOK_URL = "https://hook.us2.make.com/7i9afi11io9jgytp0tbl02r3jkurmpn2"
+  const MAKE_WEBHOOK_URL = "https://hook.us2.make.com/26sw7krr25h2tpw605bwj7psuqv18w5q"
   const REQUEST_TIMEOUT = 30000 // 30 seconds
 
   useEffect(() => {

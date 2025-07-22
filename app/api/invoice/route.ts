@@ -1,6 +1,6 @@
 import { NextResponse } from "next/server"
 
-const MAKE_WEBHOOK_URL = process.env.MAKE_WEBHOOK_URL || "https://hook.us2.make.com/7i9afi11io9jgytp0tbl02r3jkurmpn2"
+const MAKE_WEBHOOK_URL = process.env.MAKE_WEBHOOK_URL || "https://hook.us2.make.com/26sw7krr25h2tpw605bwj7psuqv18w5q"
 const REQUEST_TIMEOUT = 30000 // 30 seconds
 
 export async function GET(request: Request) {
