@@ -45,12 +45,15 @@ export default function RootLayout({
                 document.documentElement.offsetHeight
               );
               
-              console.log('Sending height to parent:', height);
+              // Add 10px buffer to prevent scrollbars in iframe
+              const adjustedHeight = height + 10;
+              
+              console.log('Sending height to parent:', adjustedHeight);
               
               // Send to any parent origin (more flexible)
               window.parent.postMessage({
                 type: 'resize',
-                height: height,
+                height: adjustedHeight,
                 source: 'markdown-quote-design'
               }, '*');
             }
